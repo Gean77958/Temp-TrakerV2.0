@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body {
+    background-color: #222;
+    background-image: url(imagenes/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  body.claro {
+    background-color: #a7f3f6;
+    background-image: url(imagenes/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #111;
+  }
+  
+  .contenedor {
+    width: 90%;
+    max-width: 600px;
+    background: linear-gradient(125deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    padding: 1rem;
+  
+    box-shadow:
+      0 0 10px skyblue,
+      0 0 20px #0f0,
+      0 0 40px rgb(0, 255, 221),
+      0 0 60px rgb(0, 195, 255),
+      0 0 80px #0ff;
+    
+    animation: resplandor 3s infinite alternate;
+  }
+  
+  @keyframes resplandor {
+    0% {
+      box-shadow:
+        0 0 10px skyblue,
+        0 0 20px #0f0,
+        0 0 40px rgb(0, 225, 255),
+        0 0 60px rgb(0, 208, 255),
+        0 0 80px #0ff;
+    }
+    100% {
+      box-shadow:
+        0 0 20px #0f0,
+        0 0 30px #0f0,
+        0 0 50px rgb(0, 255, 247),
+        0 0 70px rgb(0, 204, 255),
+        0 0 90px #0ff;
+    }
+  }
+
+  
+  body.claro .contenedor {
+    background: linear-gradient(125deg, #90e6e6, #2db4a2);
+    color: #222;
+  }
+  
+  .buscador {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+  
+  button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button img {
+    width: 25px;
+  }
+  
+  button:hover {
+    background: #c0e0dd;
+  }
+  
+  .clima-icono {
+    width: 120px;
+    margin-top: 20px;
+  }
+  
+  .clima-texto {
+    font-size: 16px;
+    font-style: italic;
+    margin: 15px 0;
+  }
+  
+  h1 {
+    font-size: 64px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: -10px;
+  }
+  
+  .detalles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  
+  .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .col img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .humedad, .viento {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Pronóstico */
+  .pronostico {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .dia {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+  }
+  
+  body.claro .dia {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dia img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #unidadBtn, #modoBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #fff;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  #unidadBtn:hover, #modoBtn:hover {
+    background: #aadcf7;
+  }
+  
+  canvas {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+  }
+  .botones-control {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #graficoTemp{
+    max-width: 100%;
+  height: auto;
+  }
+  
+  
+  
